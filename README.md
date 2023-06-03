@@ -13,4 +13,6 @@ You can check the pubspec.yaml to modify to your own functional version of fijkp
 
 ## Getting Started
 
-Just clone and build with flutter.
+Just clone and build with flutter with 
+
+flutter create .

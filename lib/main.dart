@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fijkplayer/fijkplayer.dart';
+import 'package:wakelock/wakelock.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,18 +34,20 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
-    player.setDataSource("https://xxxxxxxxxxx.com/video.m3u8", autoPlay: true);
+    player.setDataSource("http://x.x.x.x:8080/2125/2125.m3u8", autoPlay: true);
+
+    Wakelock.enable();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
+    Wakelock.disable();
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
